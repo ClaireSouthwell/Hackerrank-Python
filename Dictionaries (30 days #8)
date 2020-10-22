@@ -1,0 +1,19 @@
+import sys
+import os 
+import math 
+
+if __name__ == '__main__':
+    n = int(input())
+
+    person = [input().split() for _ in range(n)]
+    phone_book = {k: v for k,v in person}
+
+    while True:
+        try:
+            query = input()
+            if query in phone_book:
+                print(query + '=' + phone_book[query])
+            else:
+                print('Not found')
+        except:
+            break
